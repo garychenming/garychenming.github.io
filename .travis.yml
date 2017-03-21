@@ -2,32 +2,33 @@ language: node_js
 node_js: 
   - "iojs"
   - "7"
+  - npm test
 
-# S: Build Lifecycle
-install:
-  - npm install
+# # S: Build Lifecycle
+# install:
+#   - npm install
 
 
-before_script:
-  - npm install -g gulp
+# before_script:
+#   - npm install -g gulp
 
-script:
-#  - hexo g
-   - npm test
+# script:
+# #  - hexo g
+   
 
-after_script:
-  - cd ./public
-  - git init
-  - git config user.name "garychenming"
-  - git config user.email "garychenming@gmail.com"
-  #- git add .
-  #- git commit -m "Update docs"
-  #- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
- E: Build LifeCycle
+# after_script:
+#   - cd ./public
+#   - git init
+#   - git config user.name "garychenming"
+#   - git config user.email "garychenming@gmail.com"
+#   #- git add .
+#   #- git commit -m "Update docs"
+#   #- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+#  E: Build LifeCycle
 
-branches:
-  only:
-    - master
-env:
- global:
-   - GH_REF: github.com/garychenming/garychenming.github.io.git
+# branches:
+#   only:
+#     - master
+# env:
+#  global:
+#    - GH_REF: github.com/garychenming/garychenming.github.io.git
