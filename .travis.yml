@@ -11,7 +11,7 @@ before_script:
 
 script:
 #  - hexo g
-   - git s
+   - npm test
 
 after_script:
   - cd ./public
